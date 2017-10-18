@@ -28,13 +28,40 @@ You do not need to worry about the data supplied, it will be an array at all tim
 // [1, 2, 3].all(isGreaterThanZero) => true
 // [-1, 0, 2].all(isGreaterThanZero) => false
 // *** YOUR CODE HERE ***
+function all(array, callback){
+  let counter = 0;
+  for (let i = 0; i < array.length; i++){
+    if(callback(array[i] === true)){
+      counter += 1
+    }
+  }
+  if(counter === array.length){
+    return true
+  } else {
+    return false
+  }
+}
+// to check the 'condition' in every element of array, use a counter
+
 
 
 
 // [-1, 2, 3].none(isLessThanZero) => false
 // [-1, -2, -3].none(isGreaterThanZero) => true
 // *** YOUR CODE HERE ***
-
+function all(array, callback){
+  let counter = 0;
+  for (let i = 0; i < array.length; i++){
+    if(callback(array[i] === false)){
+      counter += 1
+    }
+  }
+  if(counter === array.length){
+    return true
+  } else {
+    return false
+  }
+}
 
 // [-1, 2, 3].any(isGreaterThanZero) => true
 // [-1, -2, -3].any(isGreaterThanZero) => false
@@ -50,7 +77,7 @@ function isLessThanZero (num) {
   return num < 0;
 }
 
-// write some of your own invocations below, 
+// write some of your own invocations below,
 // do your results match the original expected results?
 // *** YOUR CODE HERE ***
 

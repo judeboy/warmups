@@ -7,6 +7,7 @@ This function returns true only if the predicate supplied returns true for all t
 [1, 2, 3].all(isGreaterThanZero) => true
 [-1, 0, 2].all(isGreaterThanZero) => false
 
+
 * none
 
 This function returns true only if the predicate supplied returns false for all the items in the array
