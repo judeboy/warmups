@@ -5,14 +5,28 @@
   // [ 1, 2, 3 ],
   // [ 4, 5, 6 ],
   // [ 7, 8, 9 ]
-// ] ); 
+// ] )
 
 // returns -> 30 // 1 + 5 + 9 + 3 + 5 + 7
 
-function diagonals() {
-  //Solution here
-
+function diagonals(matrix) {
+  var length = matrix.length
+  var sum = 0
+  for (let i = 0; i < length; i++) {
+    for (let j = 0; j < length; j++) {
+      if (i === j) {
+        console.log(matrix[j])
+        sum += matrix[i][j]
+      }
+      if (i + j === length - 1) {
+        sum += matrix[i][j]
+      }
+    }
+  }
+  return sum
 }
+
+
 
 module.exports = {
   diagonals: diagonals,
